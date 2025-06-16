@@ -1,3 +1,34 @@
+# Instructions
+
+To set up and run this application:
+Visit the live site at: https://inseokk.github.io/LiveX_Challenge/ .
+Or, clone this repository and run the project locally by entering the following into your terminal:
+1. `git clone https://github.com/inseokk/LiveX_Challenge`
+2. `cd LiveX_Challenge`
+3. `npm install`
+4. `npm start`
+
+   
+
+### How to Use
+
+- Navigate to Home: Click the logo in the top-left corner.
+- Browse Pages: Use the left sidebar to navigate to the Apps or Documents page.
+- Open Chatbot: Click the chat icon in the bottom-right corner of the screen.
+- Search: Use the search bar in the top-right corner to search content on the current page.
+
+
+# Assumptions and Design Choices
+
+I assumed that a landing page would be useful for users, as websites commonly lead back to a main page when the logo is pressed.
+I also assumed that the search bar would only display corresponding results from the page that the user is currently on. This was to avoid confusion if the results happened to be on other pages. For an actual website with real information, it may be more convenient to display results from all different pages on the website. 
+
+# Thought process and challenges
+
+In creating this website, I laid down the basic structure and information of the website before going back to add css components and functionality. This allowed me to have an overarching view of the entire website while working.
+Additionally, designing a clean and engaging user interface was a key challenge for me. Thus, I incorporated AI suggestions for the design especially when creating the chatbot interface. By utilizing gradients and rounded shapes, I was able to achieve a user-friendly design.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
