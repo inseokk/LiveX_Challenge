@@ -1,23 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import SideMenu from './components/SideMenu';
+import ContentArea from './components/ContentArea';
+import ChatbotIcon from './components/ChatbotIcon';
+import ChatbotWindow from './components/ChatbotWindow';
+import { useState } from 'react';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('Apps');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
+
+  const toggleChatbot = () => {
+    setIsChatbotOpen(!isChatbotOpen);
+  };
+
+  const closeChatbot = () => {
+    setIsChatbotOpen(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ height: '100vh' }}>
+      <Navbar 
+        setCurrentPage={setCurrentPage} 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
+      <div style={{ display: 'flex', height: 'calc(100vh - 60px)' }}>
+        <SideMenu 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage} 
+        />
+        <ContentArea 
+          currentPage={currentPage} 
+          searchQuery={searchQuery}
+        />
+      </div>
+      
+      {/* Chatbot Components */}
+      <ChatbotIcon onClick={toggleChatbot} />
+      <ChatbotWindow 
+        isOpen={isChatbotOpen} 
+        onClose={closeChatbot} 
+      />
     </div>
   );
 }

@@ -1,0 +1,40 @@
+.message-view {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fafafa;
+}
+
+.welcome-message {
+  text-align: center;
+  color: #666;
+  margin-top: 50px;
+}
+
+.bot-avatar {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.welcome-message p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Custom scrollbar */
+.message-view::-webkit-scrollbar {
+  width: 6px;
+}
+
+.message-view::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.message-view::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.message-view::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
